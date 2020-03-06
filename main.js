@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow,Menu } = require('electron')
 
 function createWindow () {
   // Create the browser window.
@@ -6,15 +6,21 @@ function createWindow () {
     width: 800,
     height: 600,
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
     }
   })
 
+  let menu = Menu.buildFromTemplate([
+    {
+      label: "openDevTools",
+      click: ()=>win.webContents.openDevTools(),
+    }
+  ]);
+  Menu.setApplicationMenu(menu);
   // and load the index.html of the app.
   win.loadFile('index.html')
 
   // Open the DevTools.
-  win.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished
