@@ -10,6 +10,8 @@ function createWindow () {
     }
   })
 
+  
+
   // Open the DevTools.
   let menu = Menu.buildFromTemplate([
     {
