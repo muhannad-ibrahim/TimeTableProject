@@ -1,5 +1,7 @@
+'use strict'
 const { app, BrowserWindow,Menu } = require('electron')
 
+require('electron-reload')('index.html')
 function createWindow () {
   // Create the browser window.
   const win = new BrowserWindow({
@@ -47,7 +49,6 @@ app.on('activate', () => {
     createWindow()
   }
 })
-
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
 
