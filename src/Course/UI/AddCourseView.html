@@ -1,0 +1,75 @@
+<html lang="en" >
+    <head>
+        <link rel="stylesheet" href="../../../node_modules/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="../../../node_modules/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <!-- default bootstrap navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="../../../index.html">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="src/Course/UI/AddCourseView.html">Add course</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Add program</a>
+                    </li>
+                </ul>
+                <ul class="nav  navbar-right">
+                <li class="nav-item">
+                    <button id="exitButton" class="nav-link btn btn-danger">Exit</button>
+                </li>
+                </ul>
+            </div>
+        </nav>
+        <br>
+        <div class="container pt-2 jumbotron jumbotron-fluid" >
+            <h2 style="text-align: center;">
+                <b>Adding new course</b>
+                <a class="btn btn-warning float-right m-1" href="../../../index.html"><b>Back</b></a>
+            </h2>
+            
+            <br>
+            <hr>
+            <form action="http://somesite.com/prog/adduser" method="post">
+                <div class="form-group">
+                    <label class="control-label col-2">Course name: </label> <input class="col-5" type="text" placeholder="Enter course name e.g. theory of compilexy" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-2">Code of course: </label> <input class="col-5" type="text" placeholder="Enter code e.g. comp302" required>
+                </div> 
+                <div class="form-group">
+                    <label class="control-label col-2">Credit hours: </label> <input class="col-5" type="number" placeholder="Enter Credit hourse" min="1" max="4" required>
+                </div> 
+                <div class="form-group">
+                    <label class="control-label col-2">Lecture hours: </label> <input class="col-5" type="number" placeholder="Enter lecture hourse" min="0" max="4" required>
+                </div> 
+                <div class="form-group">
+                    <label class="control-label col-2">Practice hours: </label> <input class="col-5" type="number" placeholder="Enter practice hours" min="0" max="4" required>
+                </div> 
+                <div class="form-group">
+                    <label class="control-label col-2">Term: </label> <input class="col-5" type="number" placeholder="Enter the term number" min="1" max="8" required>
+                </div> 
+                <div class="form-group">
+                    <label class="control-label col-2">State</label>
+                    <select class="col-5" type="text" required>
+                        <option selected>Choose...</option>
+                        <option value="1">Active</option>
+                        <option value="0">Deactive</option>
+                      </select>  
+                </div>
+                
+            </form>
+            <button class="btn btn-lg-right btn-success m-4 ">Save</button>
+        </div>
+        <script>
+            require('../../../index.js');
+        </script>
+    </body>
+
+</html>
